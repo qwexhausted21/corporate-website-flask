@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <h1>Разрабатываем IT-будущее</h1>
+        <p>Мы создаем облачные решения, Telegram-ботов и веб-сервисы для бизнеса любого масштаба.</p>
+    </div>
+</section>
+
+<section class="container about">
+    <div>
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Почему мы?</h2>
+        <p style="margin-bottom: 15px; line-height: 1.8;">Наша команда состоит из сертифицированных инженеров, которые пишут чистый код и заботятся о безопасности ваших данных.</p>
+        <a href="/blog" class="btn">Читать наш блог</a>
+    </div>
+    <!-- Сюда вставится твоя картинка about.jpg -->
+    <img src="{{ url_for('static', filename='img/about.jpg') }}" alt="О компании">
+</section>
+{% endblock %}

@@ -1,0 +1,50 @@
+:root {
+    --primary: #0056b3;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --text: #334155;
+    --font: 'Inter', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font); color: var(--text); background: var(--light); }
+a { text-decoration: none; color: inherit; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Шапка */
+header { background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+.nav-wrapper { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+nav { display: flex; gap: 30px; }
+nav a { font-weight: 500; transition: color 0.2s; }
+nav a:hover { color: var(--primary); }
+
+/* Главный экран */
+.hero {
+    height: 600px;
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('../img/hero-bg.jpg') center/cover;
+    color: white; display: flex; align-items: center; text-align: center;
+}
+.hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; }
+
+/* Блок О нас */
+.about { padding: 100px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.about img { width: 100%; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+/* Блог */
+.blog-section { padding: 80px 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+.card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
+.card img { width: 100%; height: 200px; object-fit: cover; }
+.card-content { padding: 20px; }
+.card-content span { color: #64748b; font-size: 0.9rem; }
+.card-content h3 { margin: 10px 0; font-size: 1.2rem; }
+.btn { display: inline-block; padding: 12px 24px; background: var(--primary); color: white; border-radius: 8px; border: none; cursor: pointer; font-weight: 600; }
+.btn:hover { background: #004494; }
+
+/* Формы */
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
+.form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; }

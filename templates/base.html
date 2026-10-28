@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>InnoTech | IT-решения</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container nav-wrapper">
+            <a href="/" class="logo">InnoTech</a>
+            <nav>
+                <a href="/">Главная</a>
+                <a href="/blog">Блог</a>
+                <a href="/add_post" style="color: var(--primary);">+ Добавить новость</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer style="background: var(--dark); color: white; text-align: center; padding: 30px;">
+        <p>&copy; 2026 InnoTech Solutions. Все права защищены.</p>
+    </footer>
+</body>
+</html>
